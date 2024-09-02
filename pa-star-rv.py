@@ -111,7 +111,7 @@ for it in iteracao:
     # Verifica se houve algum salto. Se houve, atualiza o contador e coloca o salto na lista de saltos.
     if no_anterior != None:
         if not (no_anterior in vizinhos):
-            saltos += 1
+            num_saltos += 1
             saltos.append((no_anterior, vertice))
 
     # Calcula a media de H dos vizinhos que foram expandidos
@@ -131,6 +131,8 @@ for it in iteracao:
         med_h_vizinhos[vertice] = -1
     else:
         med_h_vizinhos[vertice] = soma/num_viz
+        
+    no_anterior = vertice
 
 
 # Impressao da quantidade de iteracoes:
