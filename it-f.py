@@ -95,5 +95,7 @@ for num in range(4):
         plt.ylim(y_min, y_max)
     ax.set_title(titles[num])
     ax.plot(num_interacao, valor_f, 'y-')
+    ax.set_xlabel("Iteração")
+    ax.set_ylabel("Valor de f")
 
 plt.show()

@@ -231,6 +231,9 @@ if dimensoes > 3:
                 #     ax.plot([x_np[j], x_np[j+1]], [y_np[j], y_np[j+1]], [z_np[j], z_np[j+1]], linestyle='--', color='black')
                 barra = fig.colorbar(grafico)
                 barra.set_label('Iteração')
+                ax.set_xlabel(f"Sequência {escolhidas[0]}")
+                ax.set_ylabel(f"Sequência {escolhidas[1]}")
+                ax.set_zlabel(f"Sequência {escolhidas[2]}")
 
             break
     
@@ -251,6 +254,9 @@ else:
     # Os vetores x, y e z correspondem as coordenadas dos pontos no grafico.
     # O vetor de tempo determinara a cor de cada ponto.
     grafico = ax.scatter(x,y,z, c = tempo, cmap = 'viridis', marker = 'o')
+    ax.set_xlabel("Sequência 1")
+    ax.set_ylabel("Sequência 2")
+    ax.set_zlabel("Sequência 3")
 
     # Definicao de limites dos eixos x e y
     ### NAO FUNCIONOU... ###
